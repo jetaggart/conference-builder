@@ -9,6 +9,7 @@ import SharedTypes
 
 data Element
 
+
 getElementById :: String -> Fay Element
 getElementById = ffi "document.getElementById(%1)"
 
