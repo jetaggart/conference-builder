@@ -1,0 +1,24 @@
+Default: &defaults
+  user: conference-builder
+  password: conference-builder
+  host: localhost
+  port: 5432
+  database: conference-builder
+  poolsize: 10
+
+Development:
+  <<: *defaults
+
+Testing:
+  database: conference-builder_test
+  <<: *defaults
+
+Staging:
+  database: conference-builder_staging
+  poolsize: 100
+  <<: *defaults
+
+Production:
+  database: conference-builder_production
+  poolsize: 100
+  <<: *defaults
